@@ -41,8 +41,8 @@ int main(){
     pthread_mutex_init(&m2,NULL);
     pthread_create(&t1,NULL,print,NULL);
     pthread_create(&t2,NULL,print,NULL);
-    sleep(20);
-    //pthread_join(&t1,NULL);//This will cause segment error!
-    //pthread_join(&t2,NULL);
+    //sleep(20);
+    pthread_join(t1,NULL);//This will cause segment error!
+    pthread_join(t2,NULL);
     return 0;
 }
