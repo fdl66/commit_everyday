@@ -68,5 +68,6 @@ int main(){
     for(int i=0;i<5;i++){
         printf("values[%d]:%d\n",i,values[i]);
     }
+    pthread_mutex_destory(&m);
     return 0;
 }
